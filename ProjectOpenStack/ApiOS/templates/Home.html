@@ -1,0 +1,225 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="utf-8" />
+<title>OpenStack - Responsive Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!-- BEGIN PLUGIN CSS -->
+<link href="{% static 'assets/plugins/pace/pace-theme-flash.css" rel="stylesheet'%}" type="text/css" media="screen"/>
+<!-- END PLUGIN CSS -->
+
+<!-- BEGIN CORE CSS FRAMEWORK -->
+<link href="{% static 'assets/plugins/boostrapv3/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/boostrapv3/css/bootstrap-theme.min.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/font-awesome/css/font-awesome.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/animate.min.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.css'%}" rel="stylesheet" type="text/css"/>
+<!-- END CORE CSS FRAMEWORK -->
+
+<!-- BEGIN CSS TEMPLATE -->
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/responsive.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/css/custom-icon-set.css'%}" rel="stylesheet" type="text/css"/>
+<!-- END CSS TEMPLATE -->
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse "> 
+  <!-- BEGIN TOP NAVIGATION BAR -->
+  <div class="navbar-inner">
+  <div class="header-seperation"> 
+    <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">  
+     <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>     
+    </ul>
+      <!-- BEGIN LOGO --> 
+     
+      <!-- END LOGO --> 
+  
+      </div>
+      <!-- END RESPONSIVE MENU TOGGLER --> 
+      <div class="header-quick-nav" > 
+      <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="pull-left"> 
+        <ul class="nav quick-section">
+          <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" >
+            <div class="iconset top-menu-toggle-dark"></div>
+            </a> </li>
+        </ul>
+        <ul class="nav quick-section">
+          <li class="quicklinks"> <a href="#" class="" >
+            <div class="iconset top-reload"></div>
+            </a> </li>
+          <li class="quicklinks"> <span class="h-seperate"></span></li>
+          <li class="quicklinks"> <a href="#" class="" >
+            <div class="iconset top-tiles"></div>
+            </a> </li>
+      <li class="m-r-10 input-prepend inside search-form no-boarder">
+        <span class="add-on"> <span class="iconset top-search"></span></span>
+         <input name="" type="text"  class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
+      </li>
+      </ul>
+    </div>
+   <!-- END TOP NAVIGATION MENU -->
+   <!-- BEGIN CHAT TOGGLER -->
+      <div class="pull-right"> 
+    <div class="chat-toggler">  
+        <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom"  data-content='' data-toggle="dropdown" data-original-title="Notifications">
+          <div class="user-details"> 
+            <div class="username">
+              {{user}} <span class="bold"></span>                  
+            </div>            
+          </div> 
+        </a>  
+      
+                
+      </div>
+
+    </ul>
+      </div>
+     <!-- END CHAT TOGGLER -->
+      </div> 
+      <!-- END TOP NAVIGATION MENU --> 
+   
+  </div>
+  <!-- END TOP NAVIGATION BAR --> 
+</div>
+
+<!-- END HEADER --> 
+<!-- BEGIN CONTAINER -->
+<div class="page-container row"> 
+  <!-- BEGIN SIDEBAR -->
+  <div class="page-sidebar" id="main-menu">
+    <!-- BEGIN MINI-PROFILE -->
+    <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
+      <div class="user-info-wrapper">
+      
+        <div class="user-info">
+          <div class="greeting"></div>
+          <div class="username"> <span class="semi-bold"></span></div>
+          <div class="status"><a href="#">
+            </a></div>
+        </div>
+      </div>
+      <!-- END MINI-PROFILE -->
+      <!-- BEGIN SIDEBAR MENU -->
+      <p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="fa fa-refresh"></i></a></span></p>
+      <ul>
+              <li class=""> <a href="javascript:;">  <span class="title"></span>  </a>
+
+               
+        <li class="active"> <a href="/"> <i class="icon-custom-form"></i> <span class="title">Create Instance</span>  </a>
+        </li>
+        <li class=""> <a href="/list"> <i class="icon-custom-thumb"></i> <span class="title">Instances</span></a>
+        </li>
+      
+       
+      </ul>
+     
+      <div class="clearfix"></div>
+      <!-- END SIDEBAR MENU -->
+    </div>
+  </div>
+   <div class="footer-widget">    
+
+  <div class="pull-right">
+    <div class="details-status">
+  </div>  
+  <a href="/"><i class="fa fa-power-off"></i></a></div>
+  </div>
+  <!-- END SIDEBAR --> 
+  <!-- BEGIN PAGE CONTAINER-->
+    <div class="page-content">
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+            <div id="portlet-config" class="modal hide">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button"></button>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="content">
+                <ul class="breadcrumb">
+                    <li>
+                        <p>YOU ARE HERE</p>
+                    </li> 
+                    <li><a href="#" class="active">Instance</a>
+
+                    </li>
+                </ul>
+                <div class="page-title">  
+
+                      <h3>Create- <span class="semi-bold">VM</span></h3>  
+                </div>
+
+
+
+ <div class="row">
+            <div class="col-md-12">
+              <div class="grid simple">
+                <div class="grid-title no-border">
+                  <h4>Create an <span class="semi-bold">Instance</span></h4>
+                  <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+                </div>
+				
+                <div class="grid-body no-border"> <br>
+				
+                  <div class="row">
+				  <form method="POST" >{% csrf_token %}
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+					
+                      <div class="form-group">
+					  
+                        <label class="form-label" >Name</label>
+                        <div class="controls">
+                          <input type="text" class="form-control" name="na" placeholder="name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="controls">
+                          <label class="form-label">Image</label>
+                            <select id="remote" style="width:100%" name="imm">
+                               {% for item in resp %}
+									<option value="{{ item.0 }}">{{ item.0 }}</option>
+								{% endfor %}
+                            </select>
+                        </div>
+                      </div>
+                       <div class="form-group">
+                        <div class="controls">
+                          <label class="form-label">Flavor</label>
+                            <select id="remote" style="width:100%" name="flav">
+                             {% for item in fl %}
+									 <option value="{{ item.name }}">{{ item.name }}</option>
+							{% endfor %}
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="controls">
+                          <button class="btn btn-block btn-success" type="submit">Create instance</button>
+                        </div>
+                      </div>
+
+                    </div>
+                   </form>
+                  </div>
+                </div>
+				
+              </div>
+            </div>
+          </div>
+
+
+               
+<!-- BEGIN CORE JS FRAMEWORK--> 
+<!-- END CORE TEMPLATE JS --> 
+</body>
+
+</html>
